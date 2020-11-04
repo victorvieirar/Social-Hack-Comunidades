@@ -1,0 +1,140 @@
+.home
+  section#cover
+    .left
+      img(src="../../assets/logo.svg")
+    .right
+      img(src="../../assets/background-cover.png")
+
+  section#desafio
+    .blocks
+      img(src="../../assets/jdf.1.png")
+      img(src="../../assets/jdf.2.png")
+      img(src="../../assets/jdf.3.png")
+      img(src="../../assets/jdf.4.png")
+      img(src="../../assets/jdf.5.png")
+      img(src="../../assets/jdf.6.png")
+
+    .row
+      span um novo #[img.inline(src="../../assets/olhar.typo.png")] sobre as #[img.inline(src="../../assets/comunidades.typo.png")]
+      a.button.green saiba mais
+
+    hr
+
+    .challenge-text
+      span.title.bold Desafio
+      p.text Lorem ipsum dolor sit amet.
+
+    img#lines(src="../../assets/lines.png")
+
+
+  section#online
+    span.title.bold 100% Online
+    p.text Você não precisa sair da sua casa#[br]para ajudar a construir um mundo melhor.
+
+  section#o-que-e
+    span.title.bold O que é Hackathon?
+    p.text 
+    | Hackathons são maratonas de programação. Elas são realizadas para desenvolver novas ideias e soluções para problemas reais pelos quais as pessoas ou empresas passam diariamente. 
+    | É muito fácil de encontrar profissionais das áreas de tecnologia em eventos desse tipo, mas, por se tratar de um evento em que a criatividade e o trabalho em grupo também têm destaque, cada vez mais pessoas de outras áreas não relacionadas têm participado. 
+    | São ambientes abertos à inovação e desenvolvimento de novas ideias, e bastante receptivo a pessoas e culturas diferentes.
+    img(src="../../assets/hackathon.png")
+
+  section#por-que-participar
+    span.title.bold Por que participar?
+    p.text
+    | Hackathons são eventos que promovem o networking. Você vai conhecer pessoas de todo o Brasil e de diversas áreas profissionais.
+    | E você ainda pode testar suas habilidades e conhecimentos para desenvolver novas ideias e soluções para empresas reais e que estão interessadas em conhecer pessoas criativas.
+    img(src="../../assets/subscribe.png")
+
+    a.button.green Inscrever-se
+
+  section#como-funciona
+    span.title.bold Como funciona?
+    .features
+      .feature
+        .circle
+          font-awesome-icon(icon="pencil-alt")
+        span.title Inscrição
+        span.text Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+      .feature
+        .circle
+          font-awesome-icon(icon="pencil-alt")
+        span.title Formação de Times
+        span.text Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+      .feature
+        .circle
+          font-awesome-icon(icon="code")
+        span.title Criação
+        span.text Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+      .feature
+        .circle
+          font-awesome-icon(icon="chalkboard-teacher")
+        span.title Mentoria
+        span.text Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+      .feature
+        .circle
+          font-awesome-icon(icon="star")
+        span.title Avaliação
+        span.text Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+
+  section#programacao
+    span.title.bold Programação
+    .features
+      .feature(v-for="event in schedule", :key="event.name")
+        .circle
+          span.day.bold {{ event.day }}
+          span.month {{ event.month }}
+        .collapse
+          span.text {{ event.name }}
+    .background
+
+  section#premios
+    .left
+      span.title.bold Premiação
+      .prize(v-for="prize in prizes", :key="prize.name")
+        span.name {{ prize.name }}
+        span.bold.prize {{ prize.prize }}
+
+    .right
+      img(src="../../assets/prizes.png")
+
+  section.row#inscricao
+    span Quero me inscrever
+    a.button.pink Inscrever-se
+
+  section.row#regulamento
+    .left
+      span Regulamento
+      p.text Acesse o regulamento e fique por dentro#[br]de todas as regras do evento.
+    a.button.blue Acessar regulamento
+
+  section.row#mentor
+    .left
+      span Quero ser um mentor
+      p.text Ajude os participantes com#[br]seus conhecimentos técnicos.
+    a.button.green Sou um mentor
+
+  section.row#patrocinador
+    .left
+      span Quero patrocinar
+      p.text Patrocine o evento e ajude-nos a#[br]Impactar ainda mais.
+    a.button.yellow Patrocinar
+
+  footer
+    .row
+      .column
+        span Páginas
+        nav
+          a.link(href="#", target="_self") Início
+          a.link(href="#desafio", target="_self") Desafio
+          a.link(href="o-que-e", target="_self") O que é hackathon?
+          a.link(href="como-funciona", target="_self") Como funciona?
+          a.link(href="programacao", target="_self") Programação
+          a.link(href="premios", target="_self") Prêmios
+          a.link(href="regulamento", target="_self") Regulamento
+    .row
+      img(src="../../assets/logo.wide.white.svg")
+      img(src="../../assets/slogan.wide.white.svg")
+      span Social Hack ® 2020. Todos os direitos reservados. Desenvolvido por #[a.bold(href="https://instagram.com/atwork.agency", target="_blank") Atwork].
+
+    

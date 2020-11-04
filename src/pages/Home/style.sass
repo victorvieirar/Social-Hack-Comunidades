@@ -1,0 +1,570 @@
+@import "../../styles/colors"
+@import "../../styles/mixins"
+@import "../../styles/animations"
+
+.home
+  display: flex
+  flex-direction: column
+  width: 100%
+
+  #cover
+    display: flex
+    flex-direction: column
+
+    @include for-size(tablet-landscape-up)
+      flex-direction: row
+      min-height: 100vh 
+
+      .left,
+      .right
+        width: 50%
+        min-height: 100vh
+
+    .left
+      display: flex
+      align-items: center
+      justify-content: center
+      min-height: 50vh
+
+      img
+        width: 150px
+
+    .right
+      min-height: 50vh
+      display: flex
+      position: relative
+
+      img
+        width: 100%
+        min-height: 50vh
+        object-fit: cover
+
+  #desafio
+    .blocks
+      display: flex
+      flex-wrap: wrap
+      
+      img
+        width: 33.33%
+
+        @include for-size(tablet-landscape-up)
+          width: calc(100%/6)
+
+    .row
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin-top: 40px
+
+      @include for-size(tablet-landscape-up)
+        flex-direction: row
+        justify-content: space-between
+        padding: 0 calc(50% - 512px)
+
+      span
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: center
+        white-space: nowrap
+        color: white
+        font-size: .9rem
+        text-transform: uppercase
+        
+        @include for-size(tablet-landscape-up)
+          font-size: 1.2rem
+
+        img
+          height: 20px
+          margin: 0 5px
+
+          @include for-size(tablet-landscape-up)
+            height: 30px
+            margin: 0 10px
+
+      a.button
+        margin: 40px 0
+        font-size: .9rem
+
+    .challenge-text
+      display: flex
+      flex-direction: column
+      padding: 30px 40px
+      text-align: center
+
+      @include for-size(tablet-landscape-up)
+        padding: 100px 40px
+      
+      span.title 
+        font-size: 1.3rem
+
+    img#lines
+      height: 20px
+      width: 100%
+      object-fit: cover
+
+  section#online
+    background-color: $pink
+    text-align: center
+    display: flex
+    flex-direction: column
+    padding: 40px 20px
+    margin: 40px 0
+    transition: .3s ease
+
+    &:hover
+      background-color: $dark-pink
+
+    @include for-size(tablet-landscape-up)
+      flex-direction: row
+      justify-content: center
+      align-items: center
+      text-align: left
+
+      span.title
+        margin-right: 20px
+
+    span.title 
+      text-transform: uppercase
+      font-size: 1.8rem
+
+      @include for-size(tablet-landscape-up)
+        font-size: 2rem
+
+    p.text
+      font-size: .9rem
+
+  section#o-que-e,
+    display: flex
+    flex-direction: column
+    position: relative
+    padding: 40px 40px 200px 40px
+    margin: 20px
+    background-color: $blue
+    z-index: 2
+
+    @include for-size(desktop-up)
+      width: 1024px
+      align-self: center
+      padding-right: 35%
+      padding-bottom: 100px
+
+    span.title
+      font-size: 1.3rem
+
+    img
+      display: flex
+      position: absolute
+      width: 90%
+      height: 200px
+      object-fit: cover
+      bottom: -40px
+      right: -20px
+
+      @include for-size(desktop-up)
+        width: 35%
+        height: 400px
+
+  section#por-que-participar
+    display: flex
+    flex-direction: column
+    position: relative
+    padding: 100px 40px 200px 40px
+    margin: -20px 20px 60px 20px
+    background-color: $orange
+
+    @include for-size(desktop-up)
+      width: 1024px
+      align-self: center
+      text-align: right
+      padding-left: 35%
+      padding-bottom: 100px
+      align-items: flex-end
+
+    span.title
+      font-size: 1.3rem
+
+    img
+      display: flex
+      position: absolute
+      width: 90%
+      height: 200px
+      object-fit: cover
+      bottom: -20px
+      left: -20px
+
+      @include for-size(tablet-landscape-up)
+        width: 35%
+        height: 400px
+
+    a.button
+      margin: 20px 0
+      font-size: .9rem
+      font-weight: 700
+      white-space: nowrap
+    
+  section#como-funciona
+    display: flex
+    flex-direction: column
+    padding: 40px
+
+    @include for-size(tablet-landscape-up)
+      padding: 40px calc(50% - 512px)
+
+    span.title
+      font-size: 1.3rem
+      margin-bottom: 30px
+    
+    .features
+      display: flex
+      flex-wrap: wrap
+
+      @include for-size(tablet-landscape-up)
+        flex-wrap: nowrap
+
+        .feature
+          width: 20%
+
+      .feature
+        width: 50%
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding: 0 10px
+        text-align: center
+        height: 250px
+
+        span.title
+          font-size: .9rem
+          text-transform: uppercase
+          margin: 10px 0
+
+        span.text
+          font-size: .85rem
+        
+        .circle
+          width: 100px
+          height: 100px
+          border-radius: 50px
+          font-size: 2rem
+          display: flex
+          align-items: center
+          justify-content: center
+      
+      .feature:nth-child(1)
+        .circle
+          background-color: $pink
+      
+      .feature:nth-child(2)
+        .circle
+          background-color: $blue
+      
+      .feature:nth-child(3)
+        .circle
+          background-color: $green
+
+      .feature:nth-child(4)
+        .circle
+          background-color: $yellow
+
+      .feature:nth-child(5)
+        .circle
+          background-color: $orange
+
+  section#programacao
+    display: flex
+    flex-direction: column
+    padding: 40px
+
+    @include for-size(tablet-landscape-up)
+      padding: 40px calc(50% - 512px)
+
+    span.title
+      font-size: 1.3rem
+      margin-bottom: 30px
+
+    .features
+      display: flex
+      flex-direction: row
+      align-items: center
+      flex-wrap: wrap
+
+      @include for-size(tablet-landscape-up)
+        flex-wrap: nowrap
+
+        .feature
+          width: 100%/7
+
+      .feature
+        display: flex
+        flex-direction: column
+        width: 50%
+        margin: 10px 0
+        transition: .3s ease
+        cursor: pointer
+
+        .circle
+          width: 100px
+          height: 100px
+
+          display: flex
+          flex-direction: column
+          align-items: center
+          justify-content: center
+          border-radius: 50px
+
+          span.day
+            font-size: 2rem
+
+          span.month
+            font-size: .8rem
+
+        .collapse
+          opacity: 0
+          transition: .1s ease
+          margin-top: 10px
+
+        &:hover
+          transform: scale(1.1)
+          .collapse
+            opacity: 1
+
+      .feature:nth-child(1)
+        .circle
+          background-color: $orange
+      .feature:nth-child(2)
+        .circle
+          background-color: $yellow
+      .feature:nth-child(3)
+        .circle
+          background-color: $green
+      .feature:nth-child(4)
+        .circle
+          background-color: $blue
+      .feature:nth-child(5)
+        .circle
+          background-color: $pink
+      .feature:nth-child(6)
+        .circle
+          background-color: $green
+      .feature:nth-child(7)
+        .circle
+          background-color: $salmon
+
+      .feature:nth-child(4) .circle,
+      .feature:nth-child(6) .circle,
+      .feature:nth-child(5) .circle
+          span.day
+            font-size: 1.3rem
+
+  section#premios
+    display: flex
+    flex-direction: column
+
+    @include for-size(tablet-landscape-up)
+      flex-direction: row
+      padding-left: calc(50% - 512px)
+      min-height: 70vh
+
+    .left
+      display: flex
+      flex-direction: column
+      padding: 40px 0
+
+      @include for-size(tablet-landscape-up)
+        width: 50% 
+      
+      span.title 
+        font-size: 1.3rem
+
+      .prize
+        display: flex
+        flex-direction: column
+        margin: 15px 0
+
+        span.name
+          color: $blue
+          margin: 0
+        
+        span.prize 
+          font-weight: 900
+          margin: 0 
+
+      .prize:nth-child(2)
+        margin-top: 30px
+        span.name,
+        span.prize
+          font-size: 1.5rem
+
+      .prize:nth-child(n+3)
+        span.name,
+        span.prize
+          font-size: 1.3rem
+
+      .prize:nth-child(3)
+        span.name
+          color: $pink
+
+      .prize:nth-child(4)
+        span.name
+          color: $yellow
+
+    .right
+      width: 100%
+
+      @include for-size(tablet-landscape-up)
+        min-height: 70vh
+        width: 60%
+
+      img
+        width: 100%
+        height: 300px
+        object-fit: cover 
+
+        @include for-size(tablet-landscape-up)
+          height: 70vh
+
+  section.row
+    display: flex
+    flex-direction: column 
+    padding: 40px 60px
+    justify-content: flex-start
+
+    @include for-size(tablet-landscape-up)
+      padding: 60px calc(50% - 512px)
+      flex-direction: row
+      align-items: center
+      justify-content: space-between
+
+    span
+      font-size: 1.5rem
+      font-weight: 600
+    
+    a.button
+      margin-top: 20px
+      font-size: .8rem
+      white-space: nowrap
+      width: 100%
+      text-align: center
+
+      @include for-size(tablet-landscape-up)
+        width: fit-content
+        padding: 10px 30px
+        width: 250px
+
+  section#inscricao
+    background-color: $blue
+    margin-top: -5px
+
+  section#regulamento
+    background-color: $pink
+
+  section#mentor
+    background-color: $yellow
+    
+  section#patrocinador
+    background-color: $green
+
+  footer
+    display: flex
+    flex-direction: column
+
+    @include for-size(tablet-landscape-up)
+      padding: 0 calc(50% - 512px)
+
+    .row
+      display: flex
+
+      .column
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        padding: 40px 20px
+
+        @include for-size(tablet-landscape-up)
+          padding: 40px 0
+
+        span
+          text-transform: uppercase
+          letter-spacing: .5px
+          font-weight: 600
+          font-size: .9rem
+          color: gray
+
+        nav
+          display: flex
+          flex-direction: column
+          margin: 10px 0
+
+          a:link,
+          a.link
+            text-decoration: none
+            text-transform: uppercase
+            margin: 3px 0
+            font-weight: 600
+
+    .row:nth-child(2)
+      flex-direction: column 
+      padding: 0 20px
+      width: 100%
+
+      @include for-size(tablet-landscape-up)
+        padding: 20px 0
+
+      img 
+        width: 200px
+        height: auto
+        margin: 10px 0
+
+      span
+        margin: 30px 0 
+        font-size: .8rem
+        color: gray
+
+        a:link
+          text-decoration: none
+
+a.button
+  text-decoration: none
+  color: white
+  text-transform: uppercase
+  letter-spacing: 1px
+
+  border: none
+  padding: 10px 40px
+  border-radius: 30px
+  width: fit-content
+
+  cursor: pointer
+  transition: .3s ease
+
+  &:hover
+    transition: .3s ease
+
+  &.green
+    background-color: $green
+    box-shadow: 0px 3px 5px -2px $shadow-green
+
+    &:hover
+      background-color: $dark-green
+
+  &.pink
+    background-color: $pink
+    box-shadow: 0px 3px 5px -2px $shadow-pink
+
+    &:hover
+      background-color: $dark-pink
+
+  &.blue
+    background-color: $blue
+    box-shadow: 0px 3px 5px -2px $shadow-blue
+
+    &:hover
+      background-color: $dark-blue
+    
+  &.yellow
+    background-color: $yellow
+    box-shadow: 0px 3px 5px -2px $shadow-yellow
+
+    &:hover
+      background-color: $dark-yellow
