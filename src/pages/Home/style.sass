@@ -93,7 +93,7 @@
       text-align: center
 
       @include for-size(tablet-landscape-up)
-        padding: 100px 40px
+        padding: 100px calc(50% - 512px)
       
       span.title 
         font-size: 1.3rem
@@ -232,7 +232,7 @@
         align-items: center
         padding: 0 10px
         text-align: center
-        height: 250px
+        height: 300px
 
         span.title
           font-size: .9rem
@@ -286,7 +286,7 @@
     .features
       display: flex
       flex-direction: row
-      align-items: center
+      align-items: flex-start
       flex-wrap: wrap
 
       @include for-size(tablet-landscape-up)

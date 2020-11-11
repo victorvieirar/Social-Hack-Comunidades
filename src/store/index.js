@@ -9,37 +9,37 @@ const store = new Vuex.Store({
       {
         day: "3",
         month: "nov",
-        name: "Lorem Ipsum",
+        name: "Abertura das Inscrições Online",
       },
       {
         day: "15",
         month: "nov",
-        name: "Lorem Ipsum",
+        name: "Warm Up do Social Hack",
       },
       {
         day: "23",
         month: "nov",
-        name: "Lorem Ipsum",
+        name: "Encerramento das Inscrições Online",
       },
       {
         day: "24 e 25",
         month: "nov",
-        name: "Lorem Ipsum",
+        name: "Formação Virtual de Times",
       },
       {
         day: "27 a 29",
         month: "nov",
-        name: "Lorem Ipsum",
+        name: "Social Hack",
       },
       {
         day: "30 a 1",
         month: "nov | dez",
-        name: "Lorem Ipsum",
+        name: "Avaliação de Projetos",
       },
       {
         day: "2",
         month: "dez",
-        name: "Lorem Ipsum",
+        name: "Live de divulgação dos resultados",
       },
     ],
 
