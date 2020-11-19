@@ -2,6 +2,8 @@
   section#cover
     .left
       img(src="../../assets/logo.svg")
+      a.button.green(href="https://forms.gle/G3CHKjvkizGooySFA", target="_blank") Inscrever-se
+
     .right
       img(src="../../assets/background-cover.png")
 
@@ -90,13 +92,13 @@
 
   section#premios
     .left
+      span.heavy-title Mais de #[span.green R$ 45 mil]#[br]em prêmios
       span.title.bold Premiação
-      .prize(v-for="prize in prizes", :key="prize.name")
-        span.name {{ prize.name }}
-        span.bold.prize {{ prize.prize }}
-      span.small #[sup 1] Teremos 3 colocações para cada desafio proposto
-      span.small #[sup 2] Total de prêmios equivalem mais de R$ 45 mil
-      span.small #[sup 3] O kit contém 1 Echo® Dot (3rd gen) e 1 mochila para notebook 15"
+      .prizes
+        .prize-card(v-for="prize,idx in prizes", :key="idx")
+          span.name {{ prize.name }}
+          span.bold.prize {{ prize.prize }}
+      span.small Teremos 3 desafios e, para cada desafio, distribuiremos 3 colocações.
 
     .right
       img(src="../../assets/prizes.png")

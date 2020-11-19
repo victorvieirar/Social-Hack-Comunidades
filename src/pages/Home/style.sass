@@ -20,6 +20,11 @@
       .right
         width: 50%
         min-height: 100vh
+        display: flex
+        flex-direction: column
+
+        .button
+          margin-top: 30px
 
     .left
       display: flex
@@ -364,7 +369,8 @@
     flex-direction: column
 
     span.small
-      font-size: .9rem
+      font-size: 1.1rem
+      margin-top: 20px
       color: $blue
 
       sup
@@ -381,49 +387,80 @@
       padding: 40px 0
 
       @include for-size(tablet-landscape-up)
-        width: 50% 
+        width: 60% 
+        padding-right: 50px
       
       span.title 
         font-size: 1.3rem
 
-      .prize
-        display: flex
-        flex-direction: column
-        margin: 15px 0
+      span.heavy-title
+        font-size: 1.6rem
+        text-transform: uppercase
+        font-weight: 600
+        margin-bottom: 20px
 
-        span.name
-          color: $blue
-          margin: 0
-        
-        span.prize 
+        .green
+          color: $green
           font-weight: 900
-          margin: 0 
 
-      .prize:nth-child(2)
-        margin-top: 30px
-        span.name,
-        span.prize
-          font-size: 1.5rem
+      .prizes
+        display: flex
 
-      .prize:nth-child(n+3)
-        span.name,
-        span.prize
-          font-size: 1.3rem
+        .prize-card
+          display: flex
+          width: 33.33%
+          flex-direction: column
+          margin: 15px 0
+          border: 2px solid $blue
 
-      .prize:nth-child(3)
-        span.name
-          color: $pink
+          margin-right: 10px
+          border-radius: 10px
+          padding: 20px
+          cursor: pointer
+          transition: .3s ease
 
-      .prize:nth-child(4)
-        span.name
-          color: $yellow
+          &:hover
+            background-color: $blue
+            transform: scale(1.05) translateY(-5px)
+            
+            &:nth-child(2)
+              background-color: $pink
+            
+            &:nth-child(3)
+              background-color: $yellow
+            
+            span.name
+              color: white !important
+
+          span.name
+            color: $blue
+            margin: 0
+          
+          span.prize 
+            font-weight: 900
+            margin: 0 
+
+        .prize-card
+          span.name,
+          span.prize
+            font-size: 1rem
+
+        .prize-card:nth-child(2)
+          border-color: $pink
+          span.name
+            color: $pink
+
+        .prize-card:nth-child(3)
+          border-color: $yellow
+          span.name
+            color: $yellow
 
     .right
       width: 100%
 
       @include for-size(tablet-landscape-up)
         min-height: 70vh
-        width: 60%
+        width: 40%
 
       img
         width: 100%
