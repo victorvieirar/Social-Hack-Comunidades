@@ -46,15 +46,15 @@ const store = new Vuex.Store({
     prizes: [
       {
         name: "Primeiro Lugar",
-        prize: "R$ 1.000,00",
+        prize: "Um notebook para cada",
       },
       {
         name: "Segundo Lugar",
-        prize: "R$ 1.000,00",
+        prize: "1 smartphone para cada",
       },
       {
         name: "Terceiro Lugar",
-        prize: "R$ 1.000,00",
+        prize: "1 kit³ para cada",
       },
     ],
   },

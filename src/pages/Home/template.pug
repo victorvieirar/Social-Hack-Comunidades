@@ -88,12 +88,15 @@
           span.text {{ event.name }}
     .background
 
-  //- section#premios
-  //-   .left
-  //-     span.title.bold Premiação
-  //-     .prize(v-for="prize in prizes", :key="prize.name")
-  //-       span.name {{ prize.name }}
-  //-       span.bold.prize {{ prize.prize }}
+  section#premios
+    .left
+      span.title.bold Premiação
+      .prize(v-for="prize in prizes", :key="prize.name")
+        span.name {{ prize.name }}
+        span.bold.prize {{ prize.prize }}
+      span.small #[sup 1] Teremos 3 colocações para cada desafio proposto
+      span.small #[sup 2] Total de prêmios equivalem mais de R$ 45 mil
+      span.small #[sup 3] O kit contém 
 
     .right
       img(src="../../assets/prizes.png")
