@@ -47,14 +47,17 @@ const store = new Vuex.Store({
       {
         name: "1º Lugar",
         prize: "1 notebook para cada",
+        image: require("../assets/notebook.png"),
       },
       {
         name: "2º Lugar",
         prize: "1 smartphone para cada",
+        image: require("../assets/smartphone.png"),
       },
       {
         name: "3º Lugar",
         prize: "1 Echo® Dot + Mochila para cada",
+        image: require("../assets/third.png"),
       },
     ],
   },

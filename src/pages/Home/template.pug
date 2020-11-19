@@ -96,8 +96,11 @@
       span.title.bold Premiação
       .prizes
         .prize-card(v-for="prize,idx in prizes", :key="idx")
-          span.name {{ prize.name }}
-          span.bold.prize {{ prize.prize }}
+          .top
+            span.name {{ prize.name }}
+            span.bold.prize {{ prize.prize }}
+          .bottom
+            img(:src="prize.image")
       span.small Teremos 3 desafios e, para cada desafio, distribuiremos 3 colocações.
 
     .right

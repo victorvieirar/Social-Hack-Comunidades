@@ -409,6 +409,7 @@
         .prize-card
           display: flex
           width: 33.33%
+          justify-content: space-between
           flex-direction: column
           margin: 15px 0
           border: 2px solid $blue
@@ -418,6 +419,19 @@
           padding: 20px
           cursor: pointer
           transition: .3s ease
+
+          .top
+            display: flex
+            flex-direction: column
+
+          .bottom
+            margin-top: 30px
+            align-items: center
+            display: flex
+            flex-direction: column
+            img
+              height: 100px
+              object-fit: contain
 
           &:hover
             background-color: $blue
