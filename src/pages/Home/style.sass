@@ -14,6 +14,7 @@
     @include for-size(tablet-landscape-up)
       flex-direction: row
       min-height: 100vh 
+      max-height: 100vh
 
       .left,
       .right
@@ -46,8 +47,10 @@
       
       img
         width: 33.33%
+        object-fit: contain
 
         @include for-size(tablet-landscape-up)
+          height: calc(100%/6)
           width: calc(100%/6)
 
     .row
@@ -351,9 +354,8 @@
         .circle
           background-color: $salmon
 
-      .feature:nth-child(4) .circle,
-      .feature:nth-child(6) .circle,
-      .feature:nth-child(5) .circle
+      .feature:nth-child(3) .circle,
+      .feature:nth-child(4) .circle
           span.day
             font-size: 1.3rem
 

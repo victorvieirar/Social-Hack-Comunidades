@@ -7,37 +7,37 @@ const store = new Vuex.Store({
   state: {
     schedule: [
       {
-        day: "3",
+        day: "19",
         month: "nov",
         name: "Abertura das Inscrições Online",
       },
+      // {
+      //   day: "15",
+      //   month: "nov",
+      //   name: "Warm Up do Social Hack",
+      // },
       {
-        day: "15",
-        month: "nov",
-        name: "Warm Up do Social Hack",
-      },
-      {
-        day: "23",
-        month: "nov",
+        day: "9",
+        month: "dez",
         name: "Encerramento das Inscrições Online",
       },
       {
-        day: "24 e 25",
-        month: "nov",
+        day: "9 e 10",
+        month: "dez",
         name: "Formação Virtual de Times",
       },
       {
-        day: "27 a 29",
-        month: "nov",
+        day: "11 a 13",
+        month: "dez",
         name: "Social Hack",
       },
+      // {
+      //   day: "16",
+      //   month: "dez",
+      //   name: "Avaliação de Projetos",
+      // },
       {
-        day: "30 a 1",
-        month: "nov | dez",
-        name: "Avaliação de Projetos",
-      },
-      {
-        day: "2",
+        day: "16",
         month: "dez",
         name: "Live de divulgação dos resultados",
       },
